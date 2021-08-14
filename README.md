@@ -2,7 +2,7 @@
 # ESP32_DISCO_ACCRO_MOD
 A way to perform basic aerobatics with the disco controlled only by the skycontroller !
 
-##Basic idea
+## Basic idea
 
 An ESP32 is connected to the manual mode port of the CHUCK.
 
@@ -21,7 +21,7 @@ Once stopped, the ESP32 sends SBUS frames to switch back the CHUCK into autopilo
 
 Of course it is not perfect as the depth is not controlled during the roll :-)
 
-##Hardware
+## Hardware
 
 You need only 
 -	an ESP32 board with a USB plug. I use the ESP32 DEVKIT V1 but any would do the job.
@@ -32,9 +32,9 @@ Solder the servo wire :
 -	black or brown to GND
 -	orange or yellow (signal) to GPIO13 (D13 on the DEVKIT board)
 
-##software
+## software
 
-###DISCO
+### DISCO
 
 the 4G LTE mod shall be installed even if not used.
 The accro mod will work fine without the 4G LTE modem.
@@ -42,7 +42,7 @@ The accro mod will work fine without the 4G LTE modem.
 The spysc2.sh script must be installed into the skycontroller2. 
 The simplest way to do it is to add the file into the “skycontroller2/uavpal/bin” directory of the 4G LTE install directory. Then when installing the 4G LTE the install script will do the job and place the file in the right folder 
 
-###ESP32
+### ESP32
 
 The ESP32 shall be programmed with the “ESP32_disco_accro_mod.ino” script.
 This script requires the “SBUS_master” library to be downloaded here: https://github.com/TheDIYGuy999/SBUS  
@@ -53,9 +53,9 @@ Const char* ssid = “DISCO-xxxxxx”;
 
 That’s all you have to do. Compile and upload to the ESP32 and you’re done.
 
-##Users manual
+## Users manual
 
-###INIT SEQUENCE AND THE BLUE LED
+### INIT SEQUENCE AND THE BLUE LED
 Connect the ESP32 to the CHUCK manual mode port (the horizontal servo plug close the battery plug)
 Turn ON the CHUCK. After few seconds, the blue LED of the ESP shall turn ON.
 Turn ON the SC2.
@@ -65,7 +65,7 @@ After few seconds, the ESP32 blue LED shall turn OFF, this means it is properly 
 To finish with the blue LED, it will flash when executing manual mode aerobatics sequences controlled by the ESP32.
 
 
-###HOW TO TRIM
+### HOW TO TRIM
 
 The disco cannot fly in manual mode if it is not trimmed properly. So there is way to trim it...
 
@@ -76,7 +76,7 @@ If a trim is needed, just move roll stick and depth stick to reach the required 
 The programming is done and stored into a preference file into the ESP.
 You can unplug the GPIO23 pin. 
 
-###THE “AEROBATICS” SEQUENCES
+### THE “AEROBATICS” SEQUENCES
 They can be triggered with a sequence of 2 keys from the skycontroller2.
 
 There are 3 manual mode aerobatics sequences:
@@ -89,7 +89,7 @@ Once started, any aerobatics sequence can be stopped simply moving the roll stic
 I would advise you test all this on ground after having removed the propeller, just to train and check everything is working as expected.
 If you keep the propeller, if the GPS is fixed, the motor will rotate and rotate fast, you’re warned!
 
-##ONE LAST WORD
+## ONE LAST WORD
 This mod is in a very experimental state. You have to understand the disco will fly uncontrolled during one or two seconds. At the end of a barrel roll, according to the wind condition, the attitude might be surprising (diving, not flat…) to recover such a situation, the CHUCK will perform some oscillations which may last one or two seconds. During this, the wing may lose some altitude and this is the reason why I strongly recommend to play with this only above 60 m or even higher 150m for your first trys.
 
 Finally, I cannot be taken for responsible in case you crash your precious disco…
