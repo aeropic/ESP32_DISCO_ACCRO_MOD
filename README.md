@@ -2,9 +2,9 @@
 # ESP32_DISCO_ACCRO_MOD
 A way to perform basic aerobatics with the disco controlled only by the skycontroller !
 
-[![Youtube video](https://uavpal.com/img/yt_thumbail_github.png)](https://www.youtube.com/watch?v=nRvVFVoBn40)
-
 [![Youtube video](https://i9.ytimg.com/vi/nRvVFVoBn40/maxresdefault.jpg?time=1629130800000&sqp=CLCg6ogG&rs=AOn4CLAxe52em3qTRHPK6ysz1I4W-IczJw)](https://www.youtube.com/watch?v=nRvVFVoBn40)
+Click the image to watch the video
+
 ## Basic idea
 
 An ESP32 is connected to the manual mode port of the CHUCK.
