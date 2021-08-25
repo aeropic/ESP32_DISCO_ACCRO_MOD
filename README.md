@@ -60,12 +60,19 @@ This can be useful for example if you want to quickly investigate the SkyControl
   b) Now that you are logged in the DISCO type the following to crreat the logSC2.sh file at the root:
 
 cat > logsc2.sh
+
 #/bin/sh
+
 /data/ftp/uavpal/bin/adb start-server
+
 ip_sc2=`netstat -nu |grep 9988 | head -1 | awk '{ print $5 }' | cut -d ':' -f 1`
+
 /data/ftp/uavpal/bin/adb connect ${ip_sc2}:9050
+
 /data/ftp/uavpal/bin/adb shell
+
 /data/ftp/uavpal/bin/adb kill-server
+
 
   c) then type Control and D (Ctrl+D) : this will save the file as logsc2.sh
 
