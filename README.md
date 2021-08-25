@@ -57,7 +57,7 @@ This can be useful for example if you want to quickly investigate the SkyControl
     Then mount and remount the drive to obtain write access to the files using
     $ mount -o remount,rw /
 
-  b) Now that you are logged in the DISCO type the following:
+  b) Now that you are logged in the DISCO type the following to crreat the logSC2.sh file at the root:
 
 cat > logsc2.sh
 #/bin/sh
