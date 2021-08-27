@@ -9,9 +9,9 @@ Click the image to watch the video
 
 An ESP32 is connected to the manual mode port of the CHUCK.
 
-In the CHUCK is installed the 4G LTE mod (many thanks and respect to the authors). The modem is not required, only the software mod.
+In the CHUCK is installed the 4G LTE parachute mod (many thanks and respect to the authors). The modem is not required, only the software mod.
 
-In addition of the 4G LTE, there is also a dedicated script to spy the SC2.
+In addition of the 4G LTE parachute mod, there is also a dedicated script to spy the SC2 and another to log into the SC2.
 
 Once powered, the ESP32 will connect to the chuck WIFI. It then establishes a telnet session to remotely launch the spySC2.sh script. Then it connects to the CHUCK in UDP.
 The script sends any change of the sticks and buttons values of the SC2 to the ESP32 (with UDP packets).
