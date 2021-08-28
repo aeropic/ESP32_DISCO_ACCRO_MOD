@@ -2,7 +2,8 @@
 # ESP32_DISCO_ACCRO_MOD
 A way to perform basic aerobatics with the disco controlled only by the skycontroller !
 
-[![Youtube video](https://i9.ytimg.com/vi/nRvVFVoBn40/maxresdefault.jpg?time=1629130800000&sqp=CLCg6ogG&rs=AOn4CLAxe52em3qTRHPK6ysz1I4W-IczJw)](https://www.youtube.com/watch?v=nRvVFVoBn40)
+[![Youtube video](https://user-images.githubusercontent.com/38628543/131229448-9db6a8f6-2ea2-4819-96cd-a81b7f468cef.png)](https://www.youtube.com/watch?v=nRvVFVoBn40)
+
 Click the image to watch the video
 
 ## Basic idea
