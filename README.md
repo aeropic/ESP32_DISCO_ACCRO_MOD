@@ -40,48 +40,12 @@ Solder the servo wire :
 
 ### DISCO
 
-the 4G LTE parachute mod shall be installed even if not used.Installing the 4G LTE mod only is not enough as some files (adb, netcat-arm,... are only in the parachute mod)
+the 4G LTE mod shall be installed even if not used. Installing the 4G LTE mod only is not enough as some files (adb, netcat-arm,... are needed)
 The accro mod will work fine without the 4G LTE modem.
 
-The spysc2.sh script must be installed into the skycontroller2. 
-The simplest way to do it is to add the file into the “skycontroller2/uavpal/bin” directory of the 4G LTE install directory. Then when installing the 4G LTE the install script will do the job and place the file in the right folder 
+Download the whole "disco4g-master-ESP-32_ACCRO_MOD" directory, it contains all the files needes to install both the 4G LTE and the ACCRO mods.
+Then when installing the 4G LTE the install script will do the job and place the files in the right folders 
 
-Another script is needed to log to the skycontroller
-2) Login in the SkyControler from the DISCO
-
-In order to have a shell prompt on the Skycontroler from the DISCO, you need to create a script that will log you on the SkyControler.
-This can be useful for example if you want to quickly investigate the SkyControler or upload files through FTP from DISCO (which have a FTP server) to the SkyControler.
-
-  a) first press the power button 2 times in order to activate the telnet session. Then telnet to it using
-    $ telnet 192.168.42.1
-    
-    Then mount and remount the drive to obtain write access to the files using
-    $ mount -o remount,rw /
-
-  b) Now that you are logged in the DISCO type the following to create the logSC2.sh file at the root: (I would advice you read the readme file as raw as some characters are not displayed correctly here in the line ip_sc2....)
-
-cat > logsc2.sh
-
-#/bin/sh
-
-/data/ftp/uavpal/bin/adb start-server
-
-ip_sc2=`netstat -nu |grep 9988 | head -1 | awk '{ print $5 }' | cut -d ':' -f 1`
-
-/data/ftp/uavpal/bin/adb connect ${ip_sc2}:9050
-
-/data/ftp/uavpal/bin/adb shell
-
-/data/ftp/uavpal/bin/adb kill-server
-
-
-  c) then type Control and D (Ctrl+D) : this will save the file as logsc2.sh
-
-  d) To make this file executable, type the following command:
-
-chmod 777 ./logsc2.sh
-
-(a complete version of the file is provided in the zip, you may ftp it and move it in the right directory of disco (where telnet prompts))
 
 ### ESP32
 
@@ -133,7 +97,7 @@ I would advise you test all this on ground after having removed the propeller, j
 If you keep the propeller, if the GPS is fixed, the motor will rotate and rotate fast, you’re warned!
 
 ## ONE LAST WORD
-This mod is in a very experimental state. You have to understand the disco will fly uncontrolled during one or two seconds. At the end of a barrel roll, according to the wind condition, the attitude might be surprising (diving, not flat…) to recover such a situation, the CHUCK will perform some oscillations which may last one or two seconds. During this, the wing may lose some altitude and this is the reason why I strongly recommend to play with this only above 60 m or even higher 150m for your first trys.
+This mod has been tested on my disco and on the disco of Michał Mazurek (he did the job to modify the install scripts of 4G LTE, many thanks to him!), it seems reliable enough even if still "young". You have to understand the disco will fly uncontrolled during one second. At the end of a barrel roll, according to the wind condition, the attitude might be surprising (diving, not fully flat…) to recover such a situation, the CHUCK will perform some oscillations which may last one or two seconds. During this, the wing may lose some altitude and this is the reason why I strongly recommend to play with this only above 60 m or even higher 150m for your first trys.
 
 Finally, I cannot be taken for responsible in case you crash your precious disco…
 
