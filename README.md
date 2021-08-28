@@ -125,6 +125,8 @@ There are 3 manual mode aerobatics sequences:
 -	in flight trim test: press together RIGHT_TRIGGER + LEFT_TRIGGER (in this order) and the disco shall do a flat level flight during two second. You shall hear the motor slightly accelerating… This is a way to test the trims are correct. Do it in no wind condition. Allow an attitude not fully flat (~20 deg) at the end of the two seconds. 
 
 Once started, any aerobatics sequence can be stopped simply moving the roll stick or the throttle stick. Otherwise they will automatically end after their default duration. And there is a 3rd safety measure, if no frames are received from the skycontroller during 2,5 seconds, the manual mode is exited too.
+Note that if you let the sequence finish by itself, the disco will return to autopilot mode in LOITER.
+At the opposite if you move the roll stick it will go on flying auto but not in loiter...
 
 I would advise you test all this on ground after having removed the propeller, just to train and check everything is working as expected.
 If you keep the propeller, if the GPS is fixed, the motor will rotate and rotate fast, you’re warned!
