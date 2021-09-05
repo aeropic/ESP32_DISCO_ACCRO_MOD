@@ -96,6 +96,8 @@ At the opposite if you move the roll stick it will go on flying auto but not in 
 I would advise you test all this on ground after having removed the propeller, just to train and check everything is working as expected.
 If you keep the propeller, if the GPS is fixed, the motor will rotate and rotate fast, you’re warned!
 
+When testing on ground the barrel roll sequences you should see the servos going full right (or full left) and on top of this a small oscillation in depth which is a compensation of the altitude loss: start with up compensation, decreasing and then down compensation when the disco is flying on the back then increasing again, all this lasting one second ! ...
+
 ## ONE LAST WORD
 This mod has been tested on my disco and on the disco of Michał Mazurek (he did the job to modify the install scripts of 4G LTE, many thanks to him!), it seems reliable enough even if still "young". You have to understand the disco will fly uncontrolled during one second. At the end of a barrel roll, according to the wind condition, the attitude might be surprising (diving, not fully flat…) to recover such a situation, the CHUCK will perform some oscillations which may last one or two seconds. During this, the wing may lose some altitude and this is the reason why I strongly recommend to play with this only above 60 m or even higher 150m for your first trys.
 
